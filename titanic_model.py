@@ -33,3 +33,9 @@ model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 print(model.predict(X_test)[:5])
 print(accuracy_score(predictions, y_test))
+
+# Baseline: what if we guessed "died" for everyone?
+print(y_test.mean())
+# Baseline is ~38% wrong compared to mine which is ~21% wrong - substantially better
+
+print(model.coef_)
